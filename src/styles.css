@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0f0f14;
+  color: white;
+  overflow: hidden;
+}
+
+.stage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+button {
+  padding: 12px 22px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-row {
+  display: flex;
+  gap: 20px;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: pink;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.shaky-btn {
+  animation: shake 0.3s infinite alternate;
+}
+
+@keyframes shake {
+  from { transform: translateX(-2px); }
+  to { transform: translateX(2px); }
+}
