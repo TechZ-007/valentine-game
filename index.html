@@ -4,9 +4,61 @@
   <meta charset="UTF-8" />
   <title>Secret Level</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+
+<div id="app">
+
+  <!-- Intro -->
+  <section class="stage active" id="intro">
+    <h1>⚠ Secret Level Unlocked</h1>
+    <p>Player 2 authentication required</p>
+    <button onclick="nextStage('stage1')">Start</button>
+  </section>
+
+  <!-- Stage 1 -->
+  <section class="stage" id="stage1">
+    <h2>Do you like spending time with me?</h2>
+    <div class="btn-row">
+      <button onclick="yesStage1()">Yes 😊</button>
+      <button onclick="noStage1()">No 🤨</button>
+    </div>
+  </section>
+
+  <!-- Stage 2 -->
+  <section class="stage" id="stage2">
+    <h2>Catch the Yes 👀</h2>
+    <button id="movingYes" onclick="yesStage2()">YES ❤️</button>
+  </section>
+
+  <!-- Stage 3 -->
+  <section class="stage" id="stage3">
+    <h2>You've unlocked a secret message from your favourite fan.</h2>
+    <p id="messageText"></p>
+    <button id="nextMsgBtn" onclick="nextMessage()">Next</button>
+  </section>
+
+  <!-- Stage 4 -->
+  <section class="stage" id="stage4">
+    <p>the most important question of the day that i've been meaning to ask the girl of my dreams</p>
+    <p>to just you and always you</p>
+    <h2>Will you be my Valentine Bhumika Rawat</h2>
+
+    <div class="btn-row">
+      <button onclick="yesFinal()">Yes ❤️</button>
+      <button class="no-shake">No</button>
+    </div>
+  </section>
+
+  <!-- Celebration -->
+  <section class="stage" id="celebration">
+    <h1>🎉 You've Won ❤️</h1>
+    <p>Happy Valentine's Day</p>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
